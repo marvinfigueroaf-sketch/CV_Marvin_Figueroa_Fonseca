@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | Subir Documentos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+    </div>
+
+    <nav class="navbar glass">
+        <div class="nav-content">
+            <h1 class="logo">MF<span class="highlight">.</span> Admin</h1>
+            <ul class="nav-links">
+                <li><a href="/" class="btn-outline">Volver al CV</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container admin-container">
+        <div class="glass-card upload-card">
+            <h2>Subir Nuevos Documentos</h2>
+            <p>Sube tus títulos, certificaciones o adjuntos aquí. Este portal está protegido.</p>
+
+            <form id="uploadForm" class="upload-form">
+                <div class="form-group">
+                    <label for="password">Contraseña de Administrador:</label>
+                    <input type="password" id="password" name="password" required placeholder="Ingresa tu contraseña" class="form-control">
+                </div>
+                
+                <div class="form-group file-drop-area" id="fileDropArea">
+                    <span class="file-message">Arrastra tu archivo aquí o haz clic para seleccionar</span>
+                    <input type="file" id="file" name="file" required class="file-input">
+                </div>
+
+                <button type="submit" class="btn-primary" id="uploadBtn">Subir Documento</button>
+            </form>
+
+            <div id="uploadStatus" class="status-message"></div>
+        </div>
+    </main>
+
+    <footer class="footer glass">
+        <p>© 2026 Marvin Figueroa. Ingeniero Mecatrónico.</p>
+    </footer>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
