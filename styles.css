@@ -263,6 +263,98 @@ h1, h2, h3 {
     font-size: 0.9rem;
 }
 
+/* Expertise / Skills Section */
+.skill-card {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, var(--primary-color) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.skill-card:hover::before {
+    opacity: 0.05;
+}
+
+.skill-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 30px rgba(102, 252, 241, 0.2);
+}
+
+.skill-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(102, 252, 241, 0.1);
+    border-radius: 20px;
+    color: var(--primary-color);
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.skill-card:hover .skill-icon {
+    transform: scale(1.1) rotate(5deg);
+    background: var(--primary-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 20px var(--primary-color);
+}
+
+.skill-icon svg {
+    width: 40px;
+    height: 40px;
+}
+
+.skill-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    position: relative;
+    z-index: 1;
+}
+
+.skill-card p {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.skill-tags {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.skill-tags span {
+    font-size: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--secondary-color);
+}
+
 /* Timeline */
 .timeline {
     position: relative;
